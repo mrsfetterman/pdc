@@ -1,0 +1,195 @@
+
+
+/*
+Theme Name: Pacific Doula Collective
+Theme URI: http://teamtreehouse.com/wordpress-bootstrap-theme-tutorial
+Description: Basic theme made with Bootstrap.
+Author: Crystal Fetterman
+Author URI: 
+Version: 1.0
+Tags: responsive, white, bootstrap
+
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+
+This simple theme was built using the example Bootstrap theme "Basic marketing site" found on the Bootstrap web site http://twitter.github.com/bootstrap/examples/hero.html
+*/
+
+
+
+@import url('bootstrap/css/bootstrap.css'); 
+@import url('bootstrap/css/bootstrap-responsive.css'); 
+
+/* Mixins */
+
+@mixin pdcBox {
+
+  border: 5px solid #333;
+  /*-webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;*/
+  
+  /*-webkit-box-shadow:  0px 0px 7px 5px #999;
+	box-shadow:  0px 0px 7px 5px #999;*/
+
+}
+
+@mixin backgroundGradient($topColor, $bottomColor) {
+  background: $topColor; /* Old browsers */
+  background: -moz-linear-gradient(top,  $topColor 0%, $bottomColor 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$topColor), color-stop(100%,$bottomColor)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $topColor 0%,$bottomColor 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $topColor 0%,$bottomColor 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $topColor 0%,$bottomColor 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  $topColor 0%,$bottomColor 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$topColor', endColorstr='$bottomColor',GradientType=0 ); /* IE6-8 */
+}
+
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media (min-width: 1210px) { @content; }
+  }
+  @else if $point == mama-bear {
+    @media (min-width: 768px) and (max-width: 940px)  { @content; }
+  }
+  @else if $point == kid-bear {
+    @media (max-width: 768px) { @content; }
+  }
+  @else if $point == baby-bear {
+    @media (max-width: 480px)  { @content; }
+  }
+}
+
+/* Variables */
+
+$juneauSpring: #65b6a5;
+$oceanSpray: #bfeae1;
+$coolAqua: #1bb5b7;
+$coolCobalt: #0073b2;
+$blueCloud: #dbe1ed;
+$seaOfBlues: #080860;
+$paintPalette: #4646a8;
+$highlight: #f87f0a;
+$gray: #333;
+$texture: url(images/navy_blue.png) repeat;
+
+@include breakpoint(baby-bear) {
+  .row-fluid .mobile-two {
+    width: 48.61878453038674%;
+    *width: 48.56559304102504%;
+  }
+
+  .row-fluid .mobile-one,
+  .row-fluid .mobile-two,
+  .row-fluid .mobile-three {
+    float:left;
+    margin-left: 2.7624309392265194%;
+    *margin-left: 2.709239449864817%;
+  }
+}
+
+@include breakpoint(kid-bear) {
+  .row-fluid .mobile-two {
+    width: 48.61878453038674%;
+    *width: 48.56559304102504%;
+  }
+
+  .row-fluid .mobile-one,
+  .row-fluid .mobile-two,
+  .row-fluid .mobile-three {
+    float:left;
+    margin-left: 2.7624309392265194%;
+    *margin-left: 2.709239449864817%;
+  }
+}
+
+
+body { 
+     padding-top: 40px; 
+     padding-bottom: 40px;
+     background: url(images/creampaper.png) repeat;
+}
+
+.navbar-inner {
+  background: $coolCobalt;
+  color: #fff;
+}
+.hero-unit {
+  margin-bottom: 0;
+}
+#top-nav {
+  .navbar-inner {
+    background: $texture;
+    a {
+      color: #fff;
+      text-transform: lowercase;
+    }
+  }
+}
+#splash {
+  background: url('images/emma.jpg') top right;
+  background-size: cover;
+  color: #fff;
+  
+  @include breakpoint(baby-bear) {
+    font-size: 1em;
+    line-height: 1.5em;
+    padding: 1em 2em;
+    h1 {
+      font-size: 2em;
+    }
+    
+    
+  }
+}
+
+#hp-buckets {
+  background: $coolAqua;
+  color: $gray;
+  padding: 2em 0;
+  border-top: 5px $gray solid;
+  
+  h2 {
+    font-size: 1.5em;
+    line-height: 1.2em;
+  }
+  
+  img {
+    @include pdcBox;
+  }
+}
+#tagline {
+  padding: 2% 40% 0 0;
+}
+#smartQuip {
+  color: $gray;
+  border-top: 5px $gray solid;
+
+  
+  .quip {
+    padding: 2em 5em;
+    font-size: 1.7em;
+    line-height: 1.5em;
+    
+    @include breakpoint(baby-bear) {
+      padding: 1em 2em;
+    }
+    
+    #smartQuipHeader {
+      font-size: 2em;
+      color: $highlight;
+    }
+    
+    #smartQuipSource {
+      font-weight: bold;
+      color: $highlight;
+    }
+  }
+}
+
+
+footer {
+  background: url(images/tweed.png) repeat;
+  color: #fff;
+  padding: 2em 0;
+}

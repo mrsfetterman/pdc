@@ -1,0 +1,110 @@
+@import url("bootstrap/css/bootstrap.css");
+@import url("bootstrap/css/bootstrap-responsive.css");
+/*
+Theme Name: Pacific Doula Collective
+Theme URI: http://teamtreehouse.com/wordpress-bootstrap-theme-tutorial
+Description: Basic theme made with Bootstrap.
+Author: Crystal Fetterman
+Author URI: 
+Version: 1.0
+Tags: responsive, white, bootstrap
+
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+
+This simple theme was built using the example Bootstrap theme "Basic marketing site" found on the Bootstrap web site http://twitter.github.com/bootstrap/examples/hero.html
+*/
+/* Mixins */
+/* Variables */
+@media (max-width: 480px) {
+  .row-fluid .mobile-two {
+    width: 48.61878453038674%;
+    *width: 48.56559304102504%; }
+
+  .row-fluid .mobile-one,
+  .row-fluid .mobile-two,
+  .row-fluid .mobile-three {
+    float: left;
+    margin-left: 2.7624309392265194%;
+    *margin-left: 2.709239449864817%; } }
+@media (max-width: 768px) {
+  .row-fluid .mobile-two {
+    width: 48.61878453038674%;
+    *width: 48.56559304102504%; }
+
+  .row-fluid .mobile-one,
+  .row-fluid .mobile-two,
+  .row-fluid .mobile-three {
+    float: left;
+    margin-left: 2.7624309392265194%;
+    *margin-left: 2.709239449864817%; } }
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background: url(images/creampaper.png) repeat; }
+
+.navbar-inner {
+  background: #0073b2;
+  color: #fff; }
+
+.hero-unit {
+  margin-bottom: 0; }
+
+#top-nav .navbar-inner {
+  background: url(images/navy_blue.png) repeat; }
+  #top-nav .navbar-inner a {
+    color: #fff;
+    text-transform: lowercase; }
+
+#splash {
+  background: url("images/emma.jpg") top right;
+  background-size: cover;
+  color: #fff; }
+  @media (max-width: 480px) {
+    #splash {
+      font-size: 1em;
+      line-height: 1.5em;
+      padding: 1em 2em; }
+      #splash h1 {
+        font-size: 2em; } }
+
+#hp-buckets {
+  background: #1bb5b7;
+  color: #333333;
+  padding: 2em 0;
+  border-top: 5px #333333 solid; }
+  #hp-buckets h2 {
+    font-size: 1.5em;
+    line-height: 1.2em; }
+  #hp-buckets img {
+    border: 5px solid #333;
+    /*-webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;*/
+  /*-webkit-box-shadow:  0px 0px 7px 5px #999;
+	box-shadow:  0px 0px 7px 5px #999;*/ }
+
+#tagline {
+  padding: 2% 40% 0 0; }
+
+#smartQuip {
+  color: #333333;
+  border-top: 5px #333333 solid; }
+  #smartQuip .quip {
+    padding: 2em 5em;
+    font-size: 1.7em;
+    line-height: 1.5em; }
+    @media (max-width: 480px) {
+      #smartQuip .quip {
+        padding: 1em 2em; } }
+    #smartQuip .quip #smartQuipHeader {
+      font-size: 2em;
+      color: #f87f0a; }
+    #smartQuip .quip #smartQuipSource {
+      font-weight: bold;
+      color: #f87f0a; }
+
+footer {
+  background: url(images/tweed.png) repeat;
+  color: #fff;
+  padding: 2em 0; }
